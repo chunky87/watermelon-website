@@ -1,0 +1,23 @@
+<main class="main">
+    <h2 class="post-info post-title">{{currentPost.title}}</h2>
+    <img class="post-image" src="/{{currentPost.image}}">
+    <div class="post-info">
+        <div class="post-author-desc">
+            <span class="author">{{currentPost.username}} </span>
+            <span class="post-description">{{currentPost.description}}</span>
+        </div>
+        <p class="date-posted">{{formatDate currentPost.createdAt}}</p>
+    </div>
+    <div class="comment-section">
+        <div class="comment-box">
+            <textarea maxlength="70" id="comment-text" class="comment-box-text" placeholder="Comment..."></textarea>
+            <i id="comment-button" data-postid="{{currentPost.id}}" class="far fa-comment-dots comment-box-button"
+                aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="comments" id="comment-list">
+        {{#each currentPost.comments}}
+        {{> comment this}}
+        {{/each}}
+    </div>
+</main>

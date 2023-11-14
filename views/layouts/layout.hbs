@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel="icon" href="/public/watermelon.ico" sizes="70x70" type="image/ico">
+
+  {{#each css}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/{{this}}">
+  {{/each}}
+
+  {{#each js}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script defer type="text/javascript" src="/public/js/{{this}}"></script>
+  {{/each}}
+
+</head>
+
+<body>
+  {{#if (nonEmptyObject messages)}}
+    {{> flashmessage}}
+  {{/if}}
+  <div class="wrapper">
+    {{> header}}
+    {{> nav}}
+    {{> sidebars}}
+    {{{body}}}
+    {{> footer}}
+  </div>
+</body>
+{{#if isLoggedIn}}
+  <script>
+     document.getElementById('logout-button').addEventListener('click', function(ev){
+      fetch('/users/logout',{method:"POST"})
+        .then(response => response.json())
+        .then(function(res_json){
+          console.log(res_json);
+          window.location.replace('/');
+        })
+        .catch(err => console.log(err));
+     })
+  </script>
+{{/if}}
+</html>

@@ -1,0 +1,15 @@
+<main class="main" id="main">
+    <h2>Home Page</h2>
+    {{!-- <p id="count">Number of Photos: </p> --}}
+    {{!-- <div class="photo-list" id="photo-list"> --}}
+        <div class="post-list">
+            {{#each results}}
+            <div class="post-card">
+                <img src="/{{this.thumbnail}}" alt="" class="main-post-image">
+                <p>{{this.title}}</p>
+                <p>{{this.description}}</p>
+                <a id="details" href="/posts/{{this.id}}">View More</a>
+            </div>
+            {{/each}}
+        </div>
+</main>

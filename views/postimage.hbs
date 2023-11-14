@@ -1,0 +1,20 @@
+<form class="main" 
+    action="/posts/create" 
+    method="POST" 
+    enctype="multipart/form-data">
+    <h2>Post Images</h2>
+    <label for="user image">Choose an image:</label>
+    <input class="buttons" accept="image/*" type="file" id="img-select" name="uploadImage" required><br><br>
+    <div>
+        <label for="title">Title</label><br>
+        <input maxlength="30" class="input" type="text" id="title" name="title" required><br><br>
+
+        <label for="description">Description</label><br>
+        <textarea maxlength="70" class="input" id="description" name="description" required></textarea><br><br>
+    </div>
+    <div>
+        <label for="AUP">I accept the Acceptable Use Policy for uploading images</label>
+        <input type="checkbox" id="AUP" required><br><br>
+    </div>
+    <input class="buttons" type="submit" value="Submit Image">
+</form>

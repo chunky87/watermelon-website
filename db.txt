@@ -1,0 +1,31 @@
+Users
+    id
+    username
+    email
+    password
+    createdAt
+
+posts
+    id
+    title
+    description
+    fk_image
+    fk_thumbnail    
+    fk_authorId
+    createdAt
+
+images
+    id
+    image
+    fk_postId
+
+comments
+    id
+    fk_authorId
+    text
+    fk_postId
+    createdAt
+
+sessions
+    id
+    data

@@ -1,0 +1,45 @@
+<form class="main" id="main" 
+    method="POST" 
+    action="/users/register"
+    enctype="application/x-www-form-urlencoded">
+    <h2>Register</h2>
+    <div>
+        <label for="username">Create a Username</label> <br>
+        <input class="input" type="text" name="username" id="username" required>
+        <br><br>
+        <label for="email">Email</label> <br>
+        <input class="input" type="email" name="email" id="email" required>
+        <br><br>
+        <div>
+            <label for="password">Password</label> <br>
+            <input class="input" type="password" name="password" id="password" required>
+            <br><br>
+            <label for="Confirm Password">Confirm Password</label> <br>
+            <input class="input" type="password" name="cpassword" id="cpassword" required>
+            <br><br>
+        </div>
+    </div>
+    <input type="checkbox" name="agecheck" id="Agecheck" required>
+    <label for="Agecheck">Confirm that you are 13+ years of age</label>
+    <br><br>
+
+    <input type="checkbox" name="tos" id="TOS" required>
+    <a class="buttons" href="https://www.temporary-url.com/07F1B">I accept the TOS and Privacy rules</a>
+    <br><br>
+
+    <input class="buttons" type="submit" value="Submit" id="submit">
+    <br><br>
+    <div class="message" id="usernameMessage">
+        <p>Username must:</p>
+        <p id="startChar" class="invalid">Start with a character</p>
+        <p id="least3" class="invalid">Contain 3 or more characters</p>
+    </div>
+    <div class="message" id="passwordMessage">
+        <p>Password must:</p>
+        <p id="least8" class="invalid">Contain 8 or more characters</p>
+        <p id="anUpper" class="invalid">Contain at least 1 upper case letter</p>
+        <p id="aNumber" class="invalid">Contain 1 number</p>
+        <p id="aSpecial" class="invalid">Contain 1 special character:<br>/ * - + ! @ # $ ^ & ~ [ ] </p>
+    </div>
+    <div class="message" id="confirmMessage">Enter your password again</div>
+</form>
