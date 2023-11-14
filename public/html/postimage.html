@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script defer type="text/javascript" src="../js/validation.js"></script>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Images</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Definitely Not Instagram</h1>
+        </header>
+        <nav class="flex-container">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Register</a>
+            <a href="postimage.html">Post Images</a>
+            <a href="viewpost.html">View Posts</a>
+        </nav>
+        <aside class="left-sidebar">
+        </aside>
+        <aside class="right-sidebar">
+        </aside>
+        <form class="main">
+            <h2>Post Images</h2>
+            <label for="user image">Choose an image:</label>
+            <input class="buttons" accept="image/*" type="file" name="image" id="user image"><br><br>
+            <div>
+                <label for="title">Title</label><br>
+                <input class="input" type="text" name="Title" id="title"><br><br>
+
+                <label for="description">Description</label><br>
+                <input class="input" name="Description" id="description"><br><br>
+            </div>
+            <div>
+                <label for="AUP">I accept the Acceptable Use Policy for uploading images</label>
+                <input type="checkbox" name="aup" id="AUP"><br><br>
+            </div>
+            <input class="buttons" type="submit" value="Submit Image">
+        </form>
+    </div>
+</body>
+
+</html>
