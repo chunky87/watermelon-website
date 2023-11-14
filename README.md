@@ -22,4 +22,4 @@ Create a Web Application to practice HTML/CSS/Javascript
 ## Run Instructions
 1. npm start 
 # Watermelon-Website
-https://youtu.be/5y_gna6RdbY
+[![Watch the video](https://img.youtube.com/vi/5y_gna6RdbY/maxresdefault.jpg)](https://youtu.be/5y_gna6RdbY)
